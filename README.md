@@ -105,6 +105,28 @@ git clone https://github.com:Mich-O/Mobile_Dev_Cohort4_Widget_Presentation_Dragg
 cd Mobile_Dev_Cohort4_Widget_Presentation_DraggableScrollableSheet/
 ```
 
+## Project Structure
+
+The Flutter project structure looks like this:
+
+```text
+Mobile_Dev_Cohort4_Widget_Presentation_DraggableScrollableSheet/
+├── android/
+├── ios/
+├── lib/
+│   └── main.dart
+├── test/
+├── pubspec.yaml
+├── analysis_options.yaml
+└── README.md
+```
+
+- `lib/main.dart` — Application entry point and primary UI implementation.
+- `pubspec.yaml` — Project configuration and dependency definitions.
+- `test/` — Location for automated tests.
+- `android/` and `ios/` — Platform-specific project files.
+
+
 ## Testing the Application
 
 You can test the application manually using a Flutter emulator or a connected device.
@@ -163,27 +185,6 @@ Review any reported errors, correct the underlying issues, and run the applicati
 
 
 You can also open the project in VS Code or Android Studio and launch it on a connected device or emulator.
-
-## Project Structure
-
-The Flutter project structure looks like this:
-
-```text
-Mobile_Dev_Cohort4_Widget_Presentation_DraggableScrollableSheet/
-├── android/
-├── ios/
-├── lib/
-│   └── main.dart
-├── test/
-├── pubspec.yaml
-├── analysis_options.yaml
-└── README.md
-```
-
-- `lib/main.dart` — Application entry point and primary UI implementation.
-- `pubspec.yaml` — Project configuration and dependency definitions.
-- `test/` — Location for automated tests.
-- `android/` and `ios/` — Platform-specific project files.
 
 
 ## Objectives achieved
