@@ -1,14 +1,10 @@
-# Flutter Music Player UI — DraggableScrollableSheet
+# Flutter Music Player UI — 'DraggableScrollableSheet' widget
 
-A simple Flutter music-player interface demonstrating how to build an expandable, draggable playlist panel using Flutter's `DraggableScrollableSheet` widget.
-
-The project focuses on interactive layout, scrollable content, and the use of Flutter widgets to create a responsive mobile interface.
+### DraggableScrollableSheet - A Flutter widget that creates a draggable, resizable panel with scrollable content
 
 ## Overview
 
 The interface features a music player with a song-list panel anchored at the bottom of the screen. Users can drag the panel to adjust its height and scroll through the available songs.
-
-For this project, I've used Flutter to show how you can combine overlapping layouts, styled containers, gesture detection, and scroll controllers to create a smooth user interaction.
 
 ## Features
 
@@ -207,19 +203,6 @@ Review any reported errors, correct the underlying issues, and run the applicati
 
 
 You can also open the project in VS Code or Android Studio and launch it on a connected device or emulator.
-
-
-## Objectives achieved
-
-From this I have gained practical experience with:
-
-- Understanding Flutter's widget-based UI structure.
-- Layering widgets using `Stack`.
-- Styling components with `Container`.
-- Building a draggable, resizable panel.
-- Displaying scrollable lists with `ListView.builder`.
-- Coordinating gestures and scroll behavior.
-- Organizing a mobile interface using reusable Flutter widgets.
 
 
 ## Author
