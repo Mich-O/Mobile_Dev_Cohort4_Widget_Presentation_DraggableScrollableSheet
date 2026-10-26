@@ -105,23 +105,68 @@ git clone https://github.com:Mich-O/Mobile_Dev_Cohort4_Widget_Presentation_Dragg
 cd Mobile_Dev_Cohort4_Widget_Presentation_DraggableScrollableSheet/
 ```
 
-**3. Install the project dependencies**
+## Testing the Application
+
+You can test the application manually using a Flutter emulator or a connected device.
+
+### 1. Run the application
+
+Open a terminal in the project directory and run:
 
 ```bash
 flutter pub get
-```
-
-**4. Run the application**
-
-```bash
 flutter run
 ```
+
+Wait for the application to build and launch.
+
+### 2. Verify the interface
+
+Check that:
+
+- The music-player interface displays correctly.
+- The song-list panel appears at the bottom of the screen.
+- The panel has a visible drag handle.
+- The song list displays the expected song items.
+
+### 3. Test the draggable panel
+
+Perform the following actions:
+
+1. **Drag upward:** Drag the panel's handle upward and verify that the panel expands.
+2. **Check the maximum size:** Continue dragging until the panel reaches its maximum height.
+3. **Scroll the playlist:** Scroll through the song list and verify that additional songs can be viewed.
+4. **Drag downward:** Pull the panel down and verify that it shrinks.
+5. **Check the minimum size:** Verify that the panel does not shrink below its configured minimum height.
+
+### 4. Verify layout behavior
+
+- Confirm that the playlist panel appears over the music-player interface.
+- Check that the panel's rounded corners and styling display correctly.
+- Verify that the song list remains usable when the panel is expanded.
+- Confirm that the panel and its contents remain visible and usable on the target device's screen size.
+
+### Expected Result
+
+The application should launch without errors, display the music-player interface, and allow the playlist panel to expand and shrink within its configured size limits. The song list should scroll correctly, with dragging and scrolling coordinated as intended.
+
+### Troubleshooting
+
+If the application fails to launch or behaves unexpectedly, run:
+
+```bash
+flutter analyze
+flutter test
+```
+
+Review any reported errors, correct the underlying issues, and run the application again.
+
 
 You can also open the project in VS Code or Android Studio and launch it on a connected device or emulator.
 
 ## Project Structure
 
-A typical Flutter project structure looks like this:
+The Flutter project structure looks like this:
 
 ```text
 Mobile_Dev_Cohort4_Widget_Presentation_DraggableScrollableSheet/
