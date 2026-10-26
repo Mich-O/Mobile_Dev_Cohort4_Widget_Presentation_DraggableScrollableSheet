@@ -109,22 +109,44 @@ cd Mobile_Dev_Cohort4_Widget_Presentation_DraggableScrollableSheet/
 
 The Flutter project structure looks like this:
 
+
 ```text
 Mobile_Dev_Cohort4_Widget_Presentation_DraggableScrollableSheet/
-├── android/
-├── ios/
+├── android/                         # Android platform files
+├── ios/                             # iOS platform files
+├── linux/                           # Linux platform files
+├── macos/                           # macOS platform files
+├── web/                             # Web platform files
+├── windows/                         # Windows platform files
 ├── lib/
-│   └── main.dart
-├── test/
-├── pubspec.yaml
-├── analysis_options.yaml
-└── README.md
+│   └── main.dart                    # Main application and UI implementation
+├── test/                            # Automated tests
+├── screenshots/                     # Application screenshots
+├── build/                           # Generated build output (not committed)
+├── .dart_tool/                      # Generated Dart tooling files (not committed)
+├── .idea/                           # IDE configuration (not committed)
+├── .gitignore                       # Git exclusion rules
+├── .metadata                        # Flutter project metadata
+├── analysis_options.yaml             # Dart static analysis configuration
+├── pubspec.yaml                     # Project configuration and dependencies
+├── pubspec.lock                     # Locked dependency versions
+├── draggable_scrollable_sheet_widget_1.iml  # IDE module file
+├── README.md                        # Project documentation
+└── main.py                          # Currently empty Python file
 ```
 
-- `lib/main.dart` — Application entry point and primary UI implementation.
-- `pubspec.yaml` — Project configuration and dependency definitions.
-- `test/` — Location for automated tests.
-- `android/` and `ios/` — Platform-specific project files.
+### Key Files and Directories
+
+- **`lib/main.dart`** — Contains the main Flutter application, including the music-player interface and draggable playlist panel.
+- **`screenshots/`** — Stores screenshots demonstrating the application.
+- **`test/`** — Contains automated tests for the application.
+- **`pubspec.yaml`** — Defines project metadata, dependencies, and Flutter assets.
+- **`pubspec.lock`** — Records the resolved dependency versions.
+- **`analysis_options.yaml`** — Configures Dart code analysis and lint rules.
+- **`.gitignore`** — Specifies files and directories Git should ignore.
+- **Platform directories** — Contain the files needed to run or build the application for Android, iOS, desktop, and web.
+- **`README.md`** — Provides project information, setup instructions, and testing guidance.
+
 
 
 ## Testing the Application
