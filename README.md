@@ -1,0 +1,164 @@
+# Flutter Music Player UI — DraggableScrollableSheet
+
+A simple Flutter music-player interface demonstrating how to build an expandable, draggable playlist panel using Flutter's `DraggableScrollableSheet` widget.
+
+The project focuses on interactive layout, scrollable content, and the use of Flutter widgets to create a responsive mobile interface.
+
+## Overview
+
+The interface features a music player with a song-list panel anchored at the bottom of the screen. Users can drag the panel to adjust its height and scroll through the available songs.
+
+For this project, I've used Flutter to show how you can combine overlapping layouts, styled containers, gesture detection, and scroll controllers to create a smooth user interaction.
+
+## Features
+
+- **Expandable playlist panel:** Drag the panel up or down to adjust its height.
+- **Scrollable song list:** Browse songs using `ListView.builder`.
+- **Adjustable panel size:** Configure the initial, minimum, and maximum heights.
+- **Custom drag handle:** Interact with the panel using a dedicated handle.
+- **Layered interface:** Display the playlist over the music-player interface.
+- **Styled layout:** Use backgrounds, spacing, and rounded corners to organize the interface.
+
+## Built With
+
+- [Flutter](https://flutter.dev/) — UI development framework.
+- [Dart](https://dart.dev/) — Programming language used by Flutter.
+
+## Flutter Widgets Demonstrated
+
+| Widget | Purpose |
+|---|---|
+| `Scaffold` | Provides the basic structure of the screen. |
+| `Stack` | Allows the music player and playlist panel to overlap. |
+| `Container` | Provides layout, spacing, background styling, and rounded corners. |
+| `DraggableScrollableSheet` | Creates the expandable, draggable playlist panel. |
+| `ListView.builder` | Builds the scrollable list of songs as needed. |
+| `GestureDetector` | Detects drag gestures on the custom handle. |
+| `DraggableScrollableController` | Allows the code to control the sheet's size. |
+| `SafeArea` | Helps keep interface content clear of system interface areas. |
+
+## How the Draggable Sheet Works
+
+The playlist panel is configured using three main properties:
+
+```dart
+DraggableScrollableSheet(
+  initialChildSize: 0.30,
+  minChildSize: 0.20,
+  maxChildSize: 0.50,
+  builder: (context, scrollController) {
+    return ListView.builder(
+      controller: scrollController,
+      itemCount: songs.length,
+      itemBuilder: (context, index) {
+        return ListTile(
+          title: Text(songs[index]),
+        );
+      },
+    );
+  },
+)
+```
+
+The snippet illustrates the core configuration; the complete application includes the surrounding layout and styling.
+
+| Property | Value | Description |
+|---|---:|---|
+| `initialChildSize` | `0.30` | The panel starts at 30% of the available height. |
+| `minChildSize` | `0.20` | The panel can shrink to 20%. |
+| `maxChildSize` | `0.50` | The panel can expand to 50%. |
+
+These values are fractions of the available height, rather than fixed pixel measurements.
+
+### Coordinating Dragging and Scrolling
+
+The sheet provides a `scrollController` to its builder. Passing this controller to the `ListView.builder` allows Flutter to coordinate resizing the panel with scrolling its contents.
+
+The application also uses a drag handle for resizing the sheet directly through gesture detection and a `DraggableScrollableController`.
+
+## Getting Started
+
+### Prerequisites
+
+Make sure you have the following installed:
+
+- Flutter SDK
+- Dart SDK (included with Flutter)
+- Android Studio, VS Code, or another supported development environment
+- An Android emulator, iOS simulator, or compatible physical device
+
+See the [official Flutter installation guide](https://docs.flutter.dev/get-started/install) if you need help setting up your environment.
+
+### Installation
+
+**1. Clone the repository**
+
+```bash
+git clone https://github.com:Mich-O/Mobile_Dev_Cohort4_Widget_Presentation_DraggableScrollableSheet.git
+```
+
+
+
+**2. Navigate to the project directory**
+
+```bash
+cd Mobile_Dev_Cohort4_Widget_Presentation_DraggableScrollableSheet/
+```
+
+**3. Install the project dependencies**
+
+```bash
+flutter pub get
+```
+
+**4. Run the application**
+
+```bash
+flutter run
+```
+
+You can also open the project in VS Code or Android Studio and launch it on a connected device or emulator.
+
+## Project Structure
+
+A typical Flutter project structure looks like this:
+
+```text
+Mobile_Dev_Cohort4_Widget_Presentation_DraggableScrollableSheet/
+├── android/
+├── ios/
+├── lib/
+│   └── main.dart
+├── test/
+├── pubspec.yaml
+├── analysis_options.yaml
+└── README.md
+```
+
+- `lib/main.dart` — Application entry point and primary UI implementation.
+- `pubspec.yaml` — Project configuration and dependency definitions.
+- `test/` — Location for automated tests.
+- `android/` and `ios/` — Platform-specific project files.
+
+
+## Objectives achieved
+
+From this I have gained practical experience with:
+
+- Understanding Flutter's widget-based UI structure.
+- Layering widgets using `Stack`.
+- Styling components with `Container`.
+- Building a draggable, resizable panel.
+- Displaying scrollable lists with `ListView.builder`.
+- Coordinating gestures and scroll behavior.
+- Organizing a mobile interface using reusable Flutter widgets.
+
+
+## Author
+
+**https://github.com/Mich-O**
+
+
+## License
+
+This project is available for educational and personal learning purposes.
